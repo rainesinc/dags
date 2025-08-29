@@ -1,6 +1,14 @@
-Does the solution work for larger graphs?  The depth first search should scale linearly.
+DAGs
 
-Can you think of any optimizations?  Not an optimization, but adding junit tests for edge cases and adding a handler upon encountering a cycle would be nice.  Could reduce the code base (LOC) by combining the DepthFirstSearch algorithm into the Main program, although the reason the algorithm was abstracted from the Main class was for testability and thoughts around alternate algorithms to be implemented in the future.  For example: Kahn's algorthm as opposed to DFS.  (Optimization through computational timed tests for various algorithms.)
+The java Main program is runnable on its own for showing the longest path from node 0.
+Unit tests are runnable in the Intellij IDE upon cloning the git repository.
+
+
+
+
+Does the solution work for larger graphs?  Yes, the depth first search should scale linearly.
+
+Can you think of any optimizations?  Not an optimization, but adding junit tests for more edge cases and adding a handler upon encountering a cycle would be nice.  For a recursive problem of this nature, you can never have enough tests!  I could reduce the code base (LOC) by combining the DepthFirstSearch algorithm into the Main program, although the reason the algorithm was abstracted from the Main class was for testability and thoughts around alternate algorithms to be implemented in the future.  For example: Kahn's algorthm as opposed to DFS.  (Optimization through computational timed tests for various algorithms.)
 
 What’s the computational complexity of your solution?   The solution is recursive, thus computational complexity would be calculated as follows:
 
