@@ -12,6 +12,19 @@ import java.util.Map;
 public class SearchTest {
 
     @Test
+    public void testLongestPathFromNode2(){
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        graph.put(0, Arrays.asList(1, 3));
+        graph.put(2, Arrays.asList(4));
+        graph.put(4, Arrays.asList(3));
+
+        Map<Integer, Integer> store = new HashMap<>();
+
+        int longestPathFromStart = Search.depthFirstSearch(2, graph, store);
+        Assert.assertEquals(2, longestPathFromStart);
+    }
+
+    @Test
     public void testLongestPathFromNode0(){
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(0, Arrays.asList(1, 3));
