@@ -4,6 +4,8 @@ Can you think of any optimizations?  Not an optimization, but adding junit tests
 
 What’s the computational complexity of your solution?   The solution is recursive, thus computational complexity would be calculated as follows:
 
+I used this reference for context below: https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms)
+
 (Master Theorem)
 T(n) = aT(n/b) + f(n) 
 
