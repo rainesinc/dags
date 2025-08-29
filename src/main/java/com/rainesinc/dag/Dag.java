@@ -1,6 +1,9 @@
 package com.rainesinc.dag;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Dag {
 
@@ -16,7 +19,7 @@ public class Dag {
 
     }
 
-    private static Map<Integer, Integer> store = new HashMap<>();
+    private static final Map<Integer, Integer> store = new HashMap<>();
 
 
 }

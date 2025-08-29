@@ -25,20 +25,20 @@ public class SearchTest {
     }
 
     @Test
-    public void testLongestPathFromNode0(){
+    public void testLongestPathFromNode4EdgeCase(){
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(0, Arrays.asList(1, 3));
-        graph.put(1, Arrays.asList(2));
-        graph.put(3, Arrays.asList(2));
+        graph.put(2, Arrays.asList(4));
+        graph.put(4, Arrays.asList(3));
 
         Map<Integer, Integer> store = new HashMap<>();
 
-        int longestPathFromStart = Search.depthFirstSearch(0, graph, store);
-        Assert.assertEquals(2, longestPathFromStart);
+        int longestPathFromStart = Search.depthFirstSearch(4, graph, store);
+        Assert.assertEquals(1, longestPathFromStart);
     }
 
     @Test
-    public void testLongestPathFromNode1(){
+    public void testLongestPathFromNode2EdgeCase(){
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(0, Arrays.asList(1, 3));
         graph.put(1, Arrays.asList(2));
@@ -46,8 +46,8 @@ public class SearchTest {
 
         Map<Integer, Integer> store = new HashMap<>();
 
-        int longestPathFromStart = Search.depthFirstSearch(1, graph, store);
-        Assert.assertEquals(1, longestPathFromStart);
+        int longestPathFromStart = Search.depthFirstSearch(2, graph, store);
+        Assert.assertEquals(0, longestPathFromStart);
     }
 
     @Test
