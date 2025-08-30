@@ -37,8 +37,9 @@ f(n): The cost of the work done to divide the problem and combine the solutions 
 Consider: 0 -> 1, 0 -> 3, 1 -> 2 -> 4 -> 3
 
 Assumptions: 
+Lets assume an edge correlates 1:1 to a subproblem.
 a = lets say, the average number of sub problems created out of (1 edge,1 edge,3 edges) is 2 or 1.5 rounded up, so we don't have a decimal to deal with.
-b = 1
+b = 1 (the factor here is arbitrary for simplicity sake)
 Thus we would have T(5) = 2(T(5/1)) + f(n).
 This would lead us to believe the time complexity is 2 * T(5) + 'the time to call depthFistSearch()'
 
