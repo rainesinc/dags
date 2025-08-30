@@ -34,4 +34,12 @@ a: The number of subproblems created at each step in the algorithm.
 b: The factor by which the problem size is reduced (so each subproblem is of size n/b).
 f(n): The cost of the work done to divide the problem and combine the solutions of the subproblems. 
 
+Consider: 0 -> 1, 0 -> 3, 1 -> 2 -> 4 -> 3
+
+Assumptions: 
+a = lets say, the average number of sub problems created out of (1 edge,1 edge,3 edges) is 2 or 1.5 rounded up, so we don't have a decimal to deal with.
+b = 1
+Thus we would have T(5) = 2(T(5/1)) + f(n).
+This would lead us to believe the time complexity is 2 * T(5) + 'the time to call depthFistSearch()'
+
 Are there any unusual cases that aren't handled?  As long as there are no cycles, and the graph is Directed, there should be no unhandled use cases.
