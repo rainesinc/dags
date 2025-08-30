@@ -3,7 +3,18 @@ DAGs
 The java Main program is runnable on its own for showing the longest path from node 0.
 Unit tests are runnable in the Intellij IDE upon cloning the git repository.
 
+Graph Syntax:
 
+graph.put(0, Arrays.asList(1, 3));
+
+graph.put(1, Arrays.asList(2)):
+
+graph.put(2, Arrays.asList(4));
+
+graph.put(4, Arrays.asList(3));
+
+means:
+0 -> 1, 0 -> 3, 1 -> 2 -> 4 -> 3
 
 
 Does the solution work for larger graphs?  Yes, the depth first search should scale linearly.
