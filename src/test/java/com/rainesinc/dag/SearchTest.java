@@ -22,7 +22,7 @@ public class SearchTest {
     }
 
     @Test
-    public void testLongestPathFromNode4EdgeCase(){
+    public void testLongestPathFromNode4EdgeCaseMaxPath1(){
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(0, Arrays.asList(1, 3));
         graph.put(2, Arrays.asList(4));
@@ -35,7 +35,7 @@ public class SearchTest {
     }
 
     @Test
-    public void testLongestPathFromNode2EdgeCase(){
+    public void testLongestPathFromNode2EdgeCaseMaxPath0(){
         Map<Integer, List<Integer>> graph = new HashMap<>();
         graph.put(0, Arrays.asList(1, 3));
         graph.put(1, Arrays.asList(2));
