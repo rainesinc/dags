@@ -40,6 +40,10 @@ Assumptions:
 Lets assume an edge correlates 1:1 to a subproblem.
 a = lets say, the average number of sub problems created out of (1 edge,1 edge,3 edges) is 2 or 1.5 rounded up, so we don't have a decimal to deal with.
 b = 1 (the factor here is 1 because the work is a whole edge).  Also assume 1 unit of work = 1ms of time. Thus, TIME_COMPLEXITY = a * T(n) + Z. 
-This would lead us to believe the approximate time complexity for our example is 2 * 5 + 'the time to call depthFistSearch() * 5' => 10ms +( 1ms * 5) => 15ms
+
+As a former Algebra teacher, I must pause here to point out what our rather linient assumptions have created for us.  An equation in slope intercept form.  It is important to note this is the REAL answer to not only this question
+but question number 1 as well; 'does it scale'.  The answer is not concrete, but rather the answer is 'it depends'.  The answer is an equation, a graph if you will, of a straight line, showing work over time, intercepting the Y axis at Z.
+
+If you simply must have something concrete, we consider again our example graph.  Simple substitution would lead us to believe the approximate time complexity for our example is 2 * 5 + 'the time to call depthFistSearch() * 5' => 10ms +( 1ms * 5) => 15ms
 
 Are there any unusual cases that aren't handled?  As long as there are no cycles, and the graph is Directed, there should be no unhandled use cases.
