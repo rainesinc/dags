@@ -14,6 +14,11 @@ public class Dag {
         graph.put(1, Arrays.asList(2));
         graph.put(3, Arrays.asList(2));
 
+        // display a representation of our graph
+        for(Integer vertex : graph.keySet()){
+            System.out.println(vertex + "->" + graph.get(vertex));
+        }
+
         int longestPathFromStart = Search.depthFirstSearch(0, graph, store);
         System.out.println("Longest path from node 0: " + longestPathFromStart);
 
