@@ -16,6 +16,8 @@ graph.put(4, Arrays.asList(3));
 means:
 0 -> 1, 0 -> 3, 1 -> 2 -> 4 -> 3
 
+(An ALTERNATE SOLUTION using a Vertex object is also available on the 'vertexObject' branch in the repository.)
+
 
 Does the solution work for larger graphs?  Yes, the depth first search should scale linearly for work (edge traversal) vs time.
 
