@@ -15,10 +15,10 @@ public class Dag {
         Vertex vertex4 = new Vertex(4);
 
 
-        vertex0.getPaths().add(1);
-        vertex1.getPaths().add(3);
-        vertex0.getPaths().add(2);
-        vertex3.getPaths().add(4);
+        vertex0.getNeighbors().add(1);
+        vertex1.getNeighbors().add(3);
+        vertex0.getNeighbors().add(2);
+        vertex3.getNeighbors().add(4);
 
 
         graph.put(0, vertex0);
@@ -27,10 +27,8 @@ public class Dag {
         graph.put(3, vertex3);
         graph.put(4, vertex4);
 
-        // the problem T(n)
         for(Vertex edge : graph.values()){
-            // start a new sub problem
-            for(Integer neighbor : edge.getPaths()) {
+            for(Integer neighbor : edge.getNeighbors()) {
                 System.out.println(edge.getId() + "->" + neighbor);
             }
         }

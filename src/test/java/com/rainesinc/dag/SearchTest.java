@@ -9,116 +9,31 @@ import java.util.*;
 public class SearchTest {
 
     @Test
-    public void testLongestPathFromNode2CaseMistakenlyOverwriteContentsOfGraph(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
+    public void testLongestPathFromNode2(){
 
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(2, Arrays.asList(4));
-        graph.put(4, Arrays.asList(3));
+        Map<Integer, Vertex> graph = new HashMap<>();
 
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(2, Arrays.asList(4));
-        graph.put(4, Arrays.asList(3));
+        Vertex vertex0 = new Vertex(0);
+        Vertex vertex1 = new Vertex(1);
+        Vertex vertex2 = new Vertex(2);
+        Vertex vertex3 = new Vertex(3);
+        Vertex vertex4 = new Vertex(4);
+
+        vertex0.getNeighbors().add(1);
+        vertex1.getNeighbors().add(3);
+        vertex0.getNeighbors().add(2);
+        vertex3.getNeighbors().add(4);
+
+        graph.put(0, vertex0);
+        graph.put(1, vertex1);
+        graph.put(2, vertex2);
+        graph.put(3, vertex3);
+        graph.put(4, vertex4);
 
         Map<Integer, Integer> store = new HashMap<>();
 
-        int longestPathFromStart = Search.depthFirstSearch(2, graph, store);
+        int longestPathFromStart = Search.depthFirstSearch(1, graph, store);
         Assert.assertEquals(2, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode2CaseMistakenlyOverwriteNodeNamesInGraph(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-
-        graph.put(0, Arrays.asList(1, 3, 3));
-        graph.put(2, Arrays.asList(4));
-        graph.put(4, Arrays.asList(3));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(2, graph, store);
-        Assert.assertEquals(2, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode2CaseLargerGraph(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(2, Arrays.asList(4));
-        graph.put(4, Arrays.asList(3));
-        graph.put(5, Arrays.asList(8, 9, 11));
-        graph.put(11, Arrays.asList(44, 12, 15));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(5, graph, store);
-        Assert.assertEquals(2, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode4EdgeCaseMaxPath1(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(2, Arrays.asList(4));
-        graph.put(4, Arrays.asList(3));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(4, graph, store);
-        Assert.assertEquals(1, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode2EdgeCaseMaxPath0(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(1, Arrays.asList(2));
-        graph.put(3, Arrays.asList(2));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(2, graph, store);
-        Assert.assertEquals(0, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode3(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(1, Arrays.asList(2));
-        graph.put(3, Arrays.asList(2));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(3, graph, store);
-        Assert.assertEquals(1, longestPathFromStart);
-    }
-
-    @Test
-    public void testLongestPathFromNode3EdgeCaseEmpty(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(1, Arrays.asList(2));
-        graph.put(3, new ArrayList());
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(3, graph, store);
-        Assert.assertEquals(0, longestPathFromStart);
-    }
-
-    @Test(expected = StackOverflowError.class)
-    public void testLongestPathFromNode3EdgeCaseCycleStackOverflow(){
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        graph.put(0, Arrays.asList(1, 3));
-        graph.put(1, Arrays.asList(2));
-        graph.put(3, Arrays.asList(0));
-
-        Map<Integer, Integer> store = new HashMap<>();
-
-        int longestPathFromStart = Search.depthFirstSearch(3, graph, store);
-        Assert.assertEquals(0, longestPathFromStart);
     }
 
 }

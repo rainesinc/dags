@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Vertex {
     private int id;
-    private List<Integer> paths;
+    private List<Integer> neighbors;
 
     public Vertex(int id){
         this.id = id;
-        this.paths = new ArrayList<>();
+        this.neighbors = new ArrayList<>();
     }
 
     public int  getId() {
@@ -20,11 +20,11 @@ public class Vertex {
         this.id = id;
     }
 
-    public List<Integer> getPaths() {
-        return paths;
+    public List<Integer> getNeighbors() {
+        return neighbors;
     }
 
-    public void setPaths(List<Integer> paths) {
-        this.paths = paths;
+    public void setNeighbors(List<Integer> neighbors) {
+        this.neighbors = neighbors;
     }
 }

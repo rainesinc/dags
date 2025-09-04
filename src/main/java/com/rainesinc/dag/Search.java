@@ -20,7 +20,7 @@ public class Search {
             return 0;
         }
 
-        for (Integer edge : graph.get(vertex).getPaths()) {
+        for (Integer edge : graph.get(vertex).getNeighbors()) {
             int neighbor = edge;
 
             int currentPath = 1 + depthFirstSearch(neighbor, graph, store);
