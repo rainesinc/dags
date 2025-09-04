@@ -1,6 +1,6 @@
 DAGs
 
-The java Main program is runnable on its own for showing the longest path from node 0.
+The java Main program is runnable on its own for showing the longest path from vertex 0.
 Unit tests are runnable in the Intellij IDE upon cloning the git repository.
 
 Graph Syntax:
