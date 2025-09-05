@@ -26,7 +26,7 @@ public class Search {
             int currentPath = 1 + depthFirstSearch(neighbor, graph, store);
             maxPath = Math.max(maxPath, currentPath);
             // store the latest maxPath for the given vertex, and return this maxPath
-            store.put(currentPath, maxPath);
+            store.put(vertex, maxPath);
         }
 
         return maxPath;
